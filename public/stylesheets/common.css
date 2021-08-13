@@ -1,0 +1,78 @@
+
+main {
+    width: 90%;
+    margin: 5px 5%;
+    overflow: hidden;
+}
+.title {
+    width: 100%;
+    height: 35px;
+    background: #fbfbfb;
+    position: relative;
+    margin-bottom: 10px;
+}
+.title img {
+    position: absolute;
+    height:20px;
+    top: 8px;
+    left: 5px;
+}
+.title span {
+    position: absolute;
+    left: 30px;
+    top: 8px;
+    color: #000;
+
+}
+
+#datalist {
+    width: 100%;
+    overflow: hidden;
+}
+#datalist > article {
+    overflow: hidden;
+    width: 74%;
+    background: #fff;
+    float: left;
+}
+#datalist > aside {
+    width: 25%;
+    background-color:#fff;
+    float: right;
+}
+#datalist {
+    width: 100%;
+    overflow: hidden;
+}
+.tag {
+    width: 100%;
+    height: 360px;
+}
+.header h3{
+    font-size: 18px;
+    width: 90%;
+    margin: 0 5%;
+    border-bottom: 1px solid #81bcaa;
+    height: 100%;
+    text-align: left;
+    line-height: 50px;
+}
+#searchIsNull {
+    width: 100%;
+    background: #ffffff;
+    font-size: 28px;
+    font-weight: bold;
+    height: 400px;
+    text-align: center;
+    line-height: 360px;
+    user-select: none;
+    margin-top: 5px;
+}
+#pre {
+    text-align: center;
+    line-height: 30px;
+}
+
+#pre_more {
+   width: 40px;
+}

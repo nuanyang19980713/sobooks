@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel='stylesheet' href='/stylesheets/common.css' />
+  </head>
+  <body>
+  <%- include('../layout/header.ejs');%>
+  <% if (data.length > 0) {%>
+    <main>
+      <div class="title">
+        <img src="/images/volume.png"/>
+        <span>别人比你有钱还比你努力，但你更厉害，靠自己的想象就拥有一切。</span>
+      </div>
+<!--      列表页-->
+      <div id="datalist">
+        <article>
+          <%for(let i=1;i<=data.length;i++){%>
+          <div class="card">
+            <div class="card-item">
+              <div class="card-tag"><%-data[i-1].category%></div>
+              <div class="card-img">
+                <a href="/books/<%-data[i-1].bookid%>" >
+                  <img src=<%-data[i-1].thumbImgUrl%>/>
+                </a>
+              </div>
+              <div class="card-title">
+                <%-data[i-1].title%>
+              </div>
+              <div class="card-author">
+                烽火戏诸侯
+                <%-data[i-1].author%>
+              </div>
+            </div>
+          </div>
+          <%}%>
+
+         </article>
+        <aside>
+          <div class="header">
+            <h3>热门标签</h3>
+          </div>
+          <div class="tag"></div>
+        </aside>
+      </div>
+      <div id="footer">
+        <div class="speedBar">
+          <%if (!flags){%>
+            <a href="#" id="pre">上一页</a>
+          <%}%>
+          <%if (flags){%>
+            <a href="/category<%-url%>/1" class="speedBar_item active">1</a>
+          <%}%>
+            <%if (num > 10) {%>
+              <div id="pre_more">....</div>
+            <%}%>
+            <%for(let i=num;i<4+num &&i<=totalPage;i++){%>
+            <%if (i===num && !flags){%>
+            <a href="/category<%-url%>/<%-i%>" class='speedBar_item active'><%-i%></a>
+            <%}else{%>
+            <a href="/category<%-url%>/<%-i%>" class="speedBar_item"><%-i%></a>
+            <%}%>
+            <%}%>
+            <%if (num + 4 < totalPage){%>
+              <div id="next_more">....</div>
+            <%}%>
+            <a href="#" id="next">下一页</a>
+          <div class="speedBar_content">总<%-totalPage%>页</div>
+        </div>
+      </div>
+    </main>
+<%} else {%>
+    <div id ="searchIsNull">
+        查询结果为空
+    </div>
+  <%}%>
+<%- include("../layout/footer.ejs");%>
+  </body>
+  <script src="/javascripts/index.js"></script>
+</html>

@@ -1,0 +1,119 @@
+
+#datalist > aside .header {
+  width: 100%;
+  height: 50px;
+  font-weight: bold;
+  font-size: 20px;
+  text-align: center;
+}
+#datalist > article .card {
+  width: 24%;
+  border: 1px solid #ccc;
+  height: 320px;
+  float: left;
+  margin-bottom: 7px;
+  margin-left: 7px;
+
+}
+.card-item {
+  padding: 5px;
+  box-sizing: border-box;
+  position: relative;
+}
+.card-tag {
+  position: absolute;
+  top: 4px;
+  left: 5px;
+  width: 60px;
+  height: 25px;
+  background: #5b5b5a;
+  opacity: .6;
+  text-align: center;
+  line-height: 25px;
+  color: #fff;
+  font-size: 13px;
+}
+.card:hover {
+  box-shadow: 0px 0px 2px #000000;
+}
+.card-img a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.card-img a > img {
+  width: 100%;
+  height: 250px;
+}
+
+.card-title {
+  margin-bottom: 3px;
+  padding: 5px 1px;
+  border-bottom: 2px dashed #eee;
+  text-align: center;
+  font-size: 15px;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+}
+.card-author {
+  text-align: center;
+  font-size: 14px;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+}
+#footer {
+  width: 74%;
+  height: 60px;
+  background: #fff;
+  margin-top: 8px;
+  float: left;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card:last-child{
+  margin-bottom: 5px;
+}
+.speedBar {
+  width: 65%;
+  height: 50%;
+  display: flex;
+  position: relative;
+}
+.speedBar a {
+  width: 40px;
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  margin-left: 4px;
+  background: #eeeeee;
+}
+.speedBar_content {
+  width: 50px!important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 8px;
+  font-size: 13px;
+  right:0;
+}
+.speedBar > div {
+  width: 7%;
+  text-align: center;
+  user-select: none;
+}
+.speedBar a:hover{
+  background: #45c49c;
+  cursor: pointer;
+}
+.active {
+  background: #000!important;
+  color: #fff!important;
+}
